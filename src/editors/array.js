@@ -517,12 +517,7 @@ JSONEditor.defaults.editors.array = JSONEditor.AbstractEditor.extend({
           }
         });
 
-        // self.empty(true);
-        var row = self.rows[i];
-        if(row.tab && row.tab.parentNode) row.tab.parentNode.removeChild(row.tab);
-        self.destroyRow(row,true);
-        self.row_cache.splice(i, 1);
-        self.rows.splice(i, 1);
+        self.empty(true);
         self.setValue(newval);
 
         if (self.rows[i]) {
